@@ -3,7 +3,10 @@
 (when window-system
   (blink-cursor-mode -1))
 
-;; Load color theme
+;;Do not show startup-message 
+(setq inhibit-startup-message t)
+
+;;Load color theme
 (load-theme 'tango-dark t)
 
 ;;enable ido mode
