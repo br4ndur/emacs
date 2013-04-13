@@ -9,5 +9,14 @@
 ;;enable ido mode
 (ido-mode t)
 
+;;display tab and newline
+(global-whitespace-mode 1)
+(setq whitespace-display-mappings
+  '(
+    (newline-mark 10 [9166 10]) ; newlne
+    (tab-mark 9 [8680 9] [92 9]) ; tab
+   )
+)
+
 (provide 'cfg-env)
 ;; cfg-env.el
