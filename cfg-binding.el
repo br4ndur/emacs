@@ -12,8 +12,9 @@
 ;; start a new eshell even if one is active.
 (global-set-key (kbd "C-x m") (lambda () (interactive) (eshell t)))
 
-;; same as shell, and keep fingers on the home row
+;; delete with ease
 (global-set-key (kbd "C-h") 'backward-delete-char)
+(global-set-key (kbd "C-d") 'branduren-delete-region )
 
 ;; so brilliant
 (global-set-key (kbd "C-x g") 'magit-status)

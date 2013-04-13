@@ -30,6 +30,7 @@
 ;;Load common user files
 (require 'cfg-register)
 (require 'cfg-env)
+(require 'cfg-brandurenfunc)
 (require 'cfg-binding)
 
 ;; Print init time
