@@ -3,16 +3,22 @@
 (when window-system
   (blink-cursor-mode -1))
 
-;;Do not show startup-message 
+;; use utf-8
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; do not show startup-message 
 (setq inhibit-startup-message t)
 
-;;Load color theme
+;; load color theme
 (load-theme 'tango-dark t)
 
-;;enable ido mode
+;; enable ido mode
 (ido-mode t)
 
-;;display tab and newline
+;; display tab and newline
 (global-whitespace-mode 1)
 (setq whitespace-display-mappings
   '(
