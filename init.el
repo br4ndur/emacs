@@ -20,6 +20,7 @@
 (add-to-list 'load-path emacs-dir)
 
 (require 'cfg-env)
+(require 'cfg-binding)
 
 ;; Print init time
 (message "Emacs startup time: %.3f seconds."  (/ (string-to-number (format-time-string "%3N" (time-since emacs-load-start-time))) 1000))
