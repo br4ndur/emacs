@@ -19,6 +19,10 @@
 ;; load current directory
 (add-to-list 'load-path emacs-dir)
 
+;;Load common files
+(require 'cl)        ;; apparantly used many places
+
+;;Load common user files
 (require 'cfg-register)
 (require 'cfg-env)
 (require 'cfg-binding)
