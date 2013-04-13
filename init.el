@@ -12,10 +12,16 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 
-;; blinking cursor off
-(blink-cursor-mode (- (*) (*) (*)))
+;; set emacs-dir to current directory
+(setq emacs-dir (file-name-directory
+                    (or (buffer-file-name) load-file-name)))
+
+;; load current directory
+(add-to-list 'load-path emacs-dir)
+
+(require 'cfg-env)
 
 ;; Print init time
-(message "Emacs startup time: %d seconds." (time-to-seconds (time-since emacs-load-start-time)))
+(message "Emacs startup time: %.3f seconds."  (/ (string-to-number (format-time-string "%3N" (time-since emacs-load-start-time))) 1000))
 
 ;;; init.el end
