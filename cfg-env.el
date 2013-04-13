@@ -9,7 +9,7 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; do not show startup-message 
+;; do not show startup-message
 (setq inhibit-startup-message t)
 
 ;; load color theme
@@ -17,6 +17,13 @@
 
 ;; enable ido mode
 (ido-mode t)
+
+;; use y n instead of yes no
+(defalias 'yes-or-no-p 'y-or-n-p)
+
+;; do not clutter directories with backup files
+(setq backup-directory-alist `(("." . ,(expand-file-name
+                                        (concat emacs-dir "backups")))))
 
 ;; display tab and newline
 (global-whitespace-mode 1)
