@@ -19,6 +19,7 @@
 ;; load current directory
 (add-to-list 'load-path emacs-dir)
 
+(require 'cfg-register)
 (require 'cfg-env)
 (require 'cfg-binding)
 
