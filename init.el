@@ -16,6 +16,11 @@
 (setq emacs-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 
+
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
 ;; load current directory
 (add-to-list 'load-path emacs-dir)
 
