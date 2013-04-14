@@ -34,6 +34,7 @@
 (require 'cfg-brandurenfunc)
 (require 'cfg-binding)
 
+
 (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
 (setq mumamo-background-colors nil)
 
@@ -43,6 +44,5 @@
 )
 
 ;; Print init time
-(message "Emacs startup time: %.3f seconds."  (/ (string-to-number (format-time-string "%3N" (time-since emacs-load-start-time))) 1000))
-
+(message "init took %d seconds." (time-to-seconds (time-since emacs-load-start-time)))
 ;;; init.el end
