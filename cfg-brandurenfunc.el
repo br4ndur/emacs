@@ -12,5 +12,13 @@
     (kill-region (region-beginning) (region-end))
     (backward-kill-word arg)))
 
+;; ido recentfile
+(defun branduren-recentf-ido-find-file ()
+  "Find a recent file using Ido."
+  (interactive)
+  (let ((file (ido-completing-read "Choose recent file: " recentf-list nil t)))
+    (when file
+      (find-file file))))
+
 (provide 'cfg-brandurenfunc)
 ;; cfg-brandurenfunc.el

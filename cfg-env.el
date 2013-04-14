@@ -25,6 +25,11 @@
 (setq backup-directory-alist `(("." . ,(expand-file-name
                                         (concat emacs-dir "backups")))))
 
+;; find recent files
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+
+
 ;; display tab and newline
 (global-whitespace-mode 1)
 (setq whitespace-display-mappings

@@ -26,6 +26,7 @@
 
 ;;Load common files
 (require 'cl)        ;; apparantly used many places
+(require 'recentf)   ;; find recent file with ease
 
 ;;Load common user files
 (require 'cfg-register)

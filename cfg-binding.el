@@ -3,8 +3,9 @@
 ;; complete with hippie
 (global-set-key (kbd "C-i") 'hippie-expand)
 
-;; use ibuffer
+;; Find buffer and files
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+(global-set-key (kbd "C-x f") 'branduren-recentf-ido-find-file)
 
 ;; window switching. (C-x o, C-x O)
 (global-set-key (kbd "C-x O") (lambda () (interactive) (other-window -1)))
