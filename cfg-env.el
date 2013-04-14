@@ -41,8 +41,11 @@
   '(lambda() (set-fill-column 80)))
 
 
-;; display tab and newline
+;; whitespace on
 (global-whitespace-mode 1)
+;; do not higlight first whitespace
+(setq whitespace-style '(trailing tabs newline tab-mark newline-mark))
+;; show tab and endline
 (setq whitespace-display-mappings
   '(
     (newline-mark 10 [9166 10]) ; newlne
