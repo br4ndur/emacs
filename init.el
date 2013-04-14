@@ -34,9 +34,12 @@
 (require 'cfg-brandurenfunc)
 (require 'cfg-binding)
 
-
+;; load nxhtml
 (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
 (setq mumamo-background-colors nil)
+
+;; load org-mode
+(add-to-list 'load-path (concat emacs-dir "submodule/org-mode/lisp"))
 
 (org-babel-do-load-languages
   'org-babel-load-languages
