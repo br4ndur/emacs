@@ -15,6 +15,7 @@
 ;; delete with ease
 (global-set-key (kbd "C-h") 'backward-delete-char)
 (global-set-key (kbd "C-d") 'branduren-delete-region )
+(global-set-key (kbd "C-w") 'branduren-bck-kill-word-or-kill-region)
 
 ;; so brilliant
 (global-set-key (kbd "C-x g") 'magit-status)
