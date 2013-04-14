@@ -34,6 +34,14 @@
 (require 'cfg-brandurenfunc)
 (require 'cfg-binding)
 
+(load (concat emacs-dir "submodule/nxhtml/autostart.el"))
+(setq mumamo-background-colors nil)
+
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((sh, true) (python,true) (C, true))
+)
+
 ;; Print init time
 (message "Emacs startup time: %.3f seconds."  (/ (string-to-number (format-time-string "%3N" (time-since emacs-load-start-time))) 1000))
 

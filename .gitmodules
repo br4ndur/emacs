@@ -1,0 +1,3 @@
+[submodule "submodule/nxhtml"]
+	path = submodule/nxhtml
+	url = git@github.com:emacsmirror/nxhtml.git
