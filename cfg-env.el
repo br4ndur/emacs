@@ -29,6 +29,9 @@
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
 
+;; highlight matching parentheses with point
+(show-paren-mode 1)
+
 
 ;; display tab and newline
 (global-whitespace-mode 1)
