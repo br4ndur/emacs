@@ -32,6 +32,14 @@
 ;; highlight matching parentheses with point
 (show-paren-mode 1)
 
+;; delete trailing whitespace before saving
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; lets use 80 characters per line
+(add-hook 'text-mode-hook 'turn-on-auto-fill)
+(add-hook 'text-mode-hook
+  '(lambda() (set-fill-column 80)))
+
 
 ;; display tab and newline
 (global-whitespace-mode 1)
