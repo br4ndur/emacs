@@ -11,6 +11,12 @@ Update submodules:
     git submodule update submodule/nxhtml
 
 
+Build org-mode:
+
+    cd ~/dotfiles/emacs/submodule/org-mode/
+    make autoloads
+
+
 Remember to set symlink:
 
     set symlink: ln -s ~/dotfiles/emacs/ ~/.emacs.d
