@@ -8,7 +8,7 @@ Update submodules:
 
     cd ~/dotfiles/emacs
     git submodule init
-    git submodule update submodule/nxhtml
+    git submodule update submodule/
 
 
 Build org-mode:
@@ -27,4 +27,3 @@ Remember to set symlink:
 Currently installed packages:
 * auctex
 * magit
-* org

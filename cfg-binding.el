@@ -1,7 +1,8 @@
 ;;; cfg-binding.el begin
 
 ;; complete with hippie
-(global-set-key (kbd "C-i") 'hippie-expand)
+;;(global-set-key (kbd "C-i") 'hippie-expand)
+(global-set-key (kbd "M-/") 'hippie-expand)
 
 ;; Find buffer and files
 (global-set-key (kbd "C-x C-b") 'ibuffer)

@@ -36,7 +36,11 @@
 
 ;; load nxhtml
 (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
+;; remove the ugly background color
 (setq mumamo-background-colors nil)
+;; disable the warnings
+(eval-after-load "mumamo" '(setq mumamo-per-buffer-local-vars
+(delq 'buffer-file-name mumamo-per-buffer-local-vars)))
 
 ;; load org-mode
 (add-to-list 'load-path (concat emacs-dir "submodule/org-mode/lisp"))

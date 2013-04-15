@@ -40,7 +40,6 @@
 (add-hook 'text-mode-hook
   '(lambda() (set-fill-column 80)))
 
-
 ;; whitespace on
 (global-whitespace-mode 1)
 ;; do not higlight first whitespace
@@ -52,6 +51,22 @@
     (tab-mark 9 [8680 9] [92 9]) ; tab
    )
 )
+
+
+;; indentation
+(setq-default c-default-style "k&r"
+              c-basic-offset 8
+              tab-width 8)
+
+(add-hook 'find-file-hook 'branduren-set-indent-style)
+(add-hook 'php-mode-hook 'branduren-set-indent-four)
+(add-hook 'nxhtml-mode-hook 'branduren-set-indent-four)
+
+
+;;(eval-after-load 'js '(progn (setq tab-width 4)))
+(eval-after-load 'js '(progn (setq tab-width 4)))
+(setq js-indent-level 4)
+
 
 (provide 'cfg-env)
 ;; cfg-env.el
