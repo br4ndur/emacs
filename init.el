@@ -34,6 +34,13 @@
 (require 'cfg-brandurenfunc)
 (require 'cfg-binding)
 
+;; load org-mode
+(add-to-list 'load-path (concat emacs-dir "submodule/org-mode/lisp"))
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((sh, true) (python,true) (C, true))
+)
+
 ;; load nxhtml
 (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
 ;; remove the ugly background color
@@ -41,14 +48,6 @@
 ;; disable the warnings
 (eval-after-load "mumamo" '(setq mumamo-per-buffer-local-vars
 (delq 'buffer-file-name mumamo-per-buffer-local-vars)))
-
-;; load org-mode
-(add-to-list 'load-path (concat emacs-dir "submodule/org-mode/lisp"))
-
-(org-babel-do-load-languages
-  'org-babel-load-languages
-  '((sh, true) (python,true) (C, true))
-)
 
 ;; Print init time
 (message "init took %d seconds." (time-to-seconds (time-since emacs-load-start-time)))
