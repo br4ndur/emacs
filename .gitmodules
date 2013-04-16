@@ -4,6 +4,3 @@
 [submodule "submodule/org-mode"]
 	path = submodule/org-mode
 	url = git://orgmode.org/org-mode.git
-[submodule "submodule/minimap"]
-	path = submodule/minimap
-	url = git://randomsample.de/minimap.git
