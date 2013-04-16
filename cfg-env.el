@@ -13,7 +13,7 @@
 (setq inhibit-startup-message t)
 
 ;; load color theme
-(load-theme 'tango-dark t)
+(load-theme 'wombat t)
 
 ;; enable ido mode
 (ido-mode t)
