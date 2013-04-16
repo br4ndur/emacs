@@ -41,6 +41,11 @@
   '((sh, true) (python,true) (C, true))
 )
 
+;; load minimap
+(add-to-list 'load-path (concat emacs-dir "submodule/minimap"))
+(require 'minimap)
+
+
 ;; load nxhtml
 (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
 ;; remove the ugly background color

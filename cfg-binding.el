@@ -25,5 +25,9 @@
 ;; help
 (global-set-key "\M-h" 'help)
 
+;; toggle-minimap
+(global-set-key (kbd "C-c m") 'branduren/minimap-toggle)
+
+
 (provide 'cfg-binding)
 ;;; cfg-binding.el end
