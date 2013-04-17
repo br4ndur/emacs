@@ -15,8 +15,8 @@
 ;; load color theme
 (load-theme 'tango-dark t)
 (set-face-background 'default "black")
-(set-face-background 'modeline "gray20")
-(set-face-foreground 'modeline "white")
+(set-face-background 'mode-line "gray20")
+(set-face-foreground 'mode-line "white")
 (set-face-attribute 'fringe nil :background "black")
 (add-to-list 'default-frame-alist '(cursor-color . "white"))
 
