@@ -13,10 +13,16 @@
 (setq inhibit-startup-message t)
 
 ;; load color theme
-(load-theme 'wombat t)
+(load-theme 'tango-dark t)
+(set-face-background 'default "black")
+(set-face-background 'modeline "gray20")
+(set-face-foreground 'modeline "white")
+(set-face-attribute 'fringe nil :background "black")
+(add-to-list 'default-frame-alist '(cursor-color . "white"))
 
 ;; enable ido mode
 (ido-mode t)
+(column-number-mode t)
 
 ;; use y n instead of yes no
 (defalias 'yes-or-no-p 'y-or-n-p)
