@@ -74,5 +74,10 @@
 (setq js-indent-level 4)
 
 
+;; set browser
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "firefox")
+
+
 (provide 'cfg-env)
 ;; cfg-env.el
