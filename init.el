@@ -34,17 +34,21 @@
 (require 'cfg-brandurenfunc)
 (require 'cfg-binding)
 
+(require 'cfg-c-cpp)
+
+;; adviced to turn this on, org-babel thingy, created by CD.
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
 ;; load org-mode
 (add-to-list 'load-path (concat emacs-dir "submodule/org-mode/lisp"))
 (org-babel-do-load-languages
   'org-babel-load-languages
-  '((sh, true) (python,true) (C, true))
+  '((sh, true) (python,true) (C, true) (latex, true))
 )
 
 ;; load minimap
 (add-to-list 'load-path (concat emacs-dir "submodule/minimap"))
 (require 'minimap)
-
 
 ;; load nxhtml
 (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
