@@ -2,7 +2,10 @@
 
 ;; complete with hippie
 ;;(global-set-key (kbd "C-i") 'hippie-expand)
-(global-set-key (kbd "M-/") 'hippie-expand)
+;;(global-set-key (kbd "M-/") 'hippie-expand)
+(global-set-key (kbd "C-t") 'hippie-expand)
+
+(global-set-key (kbd "C-M-g") 'org-plot/gnuplot)
 
 ;; Find buffer and files
 (global-set-key (kbd "C-x C-b") 'ibuffer)
