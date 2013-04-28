@@ -67,7 +67,7 @@
 (add-hook 'find-file-hook 'branduren-set-indent-style)
 (add-hook 'php-mode-hook 'branduren-set-indent-four)
 (add-hook 'nxhtml-mode-hook 'branduren-set-indent-four)
-
+(add-hook 'css-mode-hook 'branduren-set-indent-style)
 
 ;;(eval-after-load 'js '(progn (setq tab-width 4)))
 (eval-after-load 'js '(progn (setq tab-width 4)))
