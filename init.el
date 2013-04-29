@@ -51,12 +51,14 @@
 (require 'minimap)
 
 ;; load nxhtml
-(load (concat emacs-dir "submodule/nxhtml/autostart.el"))
+;; (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
+
 ;; remove the ugly background color
-(setq mumamo-background-colors nil)
+;; (setq mumamo-background-colors nil)
+
 ;; disable the warnings
-(eval-after-load "mumamo" '(setq mumamo-per-buffer-local-vars
-(delq 'buffer-file-name mumamo-per-buffer-local-vars)))
+;; (eval-after-load "mumamo" '(setq mumamo-per-buffer-local-vars
+;; (delq 'buffer-file-name mumamo-per-buffer-local-vars)))
 
 ;; Print init time
 (message "init took %d seconds." (time-to-seconds (time-since emacs-load-start-time)))
