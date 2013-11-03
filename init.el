@@ -36,8 +36,15 @@
 
 (require 'cfg-c-cpp)
 
+(require 'epa-file)
+(epa-file-enable)
+(require 'cfg-gnus)
+
 ;; adviced to turn this on, org-babel thingy, created by CD.
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+
+;; use aspell
+(setq-default ispell-program-name "aspell")
 
 ;; load org-mode
 (add-to-list 'load-path (concat emacs-dir "submodule/org-mode/lisp"))
@@ -45,21 +52,32 @@
   'org-babel-load-languages
   '((sh, true) (python,true) (C, true) (latex, true))
 )
-
 ;; load minimap
 (add-to-list 'load-path (concat emacs-dir "submodule/minimap"))
 (require 'minimap)
 
-;; load nxhtml
-;; (load (concat emacs-dir "submodule/nxhtml/autostart.el"))
+(add-to-list 'load-path (concat emacs-dir "snippets"))
+(add-to-list 'load-path (concat emacs-dir "elpa/yasnippet-20131031.628"))
+(require 'yasnippet) ;; not yasnippet-bundle
+(yas-global-mode 1)
 
-;; remove the ugly background color
-;; (setq mumamo-background-colors nil)
-
-;; disable the warnings
-;; (eval-after-load "mumamo" '(setq mumamo-per-buffer-local-vars
-;; (delq 'buffer-file-name mumamo-per-buffer-local-vars)))
+;; Server
+(load "server")
+(unless (server-running-p) (server-start))
 
 ;; Print init time
 (message "init took %d seconds." (time-to-seconds (time-since emacs-load-start-time)))
 ;;; init.el end
+(custom-set-variables
+
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(send-mail-function (quote smtpmail-send-it)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

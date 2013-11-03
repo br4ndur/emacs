@@ -24,6 +24,9 @@ Remember to set symlink:
 
 # Packages
 
-Currently installed packages:
+Currently installed with package manager:
 * auctex
 * magit
+* yasnippet
+* multi-web-mode
+* php-mode
