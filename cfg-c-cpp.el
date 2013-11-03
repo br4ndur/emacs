@@ -1,4 +1,4 @@
-;;; cfg-cpp.el --- C++ config
+;;; cfg-c-cpp.el --- C config
 
 ;;compiler c-mode
 (add-hook 'c-mode-hook
@@ -9,7 +9,9 @@
 		     (concat "gcc -g -O2 -Wall -o "
 			     (file-name-sans-extension file)
 			     ".out " file))))
-	    (local-set-key (kbd "C-x c") 'compile)))
+	    (local-set-key (kbd "C-x c c") 'compile)
+	    (local-set-key (kbd "C-x c r") 'branduren-run-out))
+)
 
 
 ;;compiler c++-mode

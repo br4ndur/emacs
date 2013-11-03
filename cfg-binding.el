@@ -1,5 +1,9 @@
 ;;; cfg-binding.el begin
 
+
+;;delete file n buffer
+(global-set-key (kbd "C-c k") 'branduren-delete-this-buffer-and-file)
+
 ;; complete with hippie
 ;;(global-set-key (kbd "C-i") 'hippie-expand)
 ;;(global-set-key (kbd "M-/") 'hippie-expand)
@@ -31,6 +35,8 @@
 ;; toggle-minimap
 (global-set-key (kbd "C-c m") 'branduren/minimap-toggle)
 
+;;C programming - goto error
+(global-set-key (kbd "C-c n") 'next-error)
 
 (provide 'cfg-binding)
 ;;; cfg-binding.el end
