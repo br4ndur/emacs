@@ -34,11 +34,28 @@
 (require 'cfg-brandurenfunc)
 (require 'cfg-binding)
 
+;;(require 'cfg-org)
 (require 'cfg-c-cpp)
 
 (require 'epa-file)
 (epa-file-enable)
 (require 'cfg-gnus)
+
+
+;;(setq org-capture-templates
+;;      '(("t" "Todo" entry (file+headline "~/documents/todo.org" "Tode:")
+;;         "* TODO %?\n %i\n %a")
+;;        ("m" "Todo mark" entry (file+headline "~/documents/todo.org" "Tode:")
+;;         "* TODO %?\n  %i\n %a")
+;;        ("j" "Journal" entry (file+datetree "~/documents/todo.org")
+;;             "* %?\nEntered on %U\n  %i\n  %a")))
+
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/documents/todo.org" "TASKS:")
+         "* TODO %?\n %i\n %a")))
+
+(global-set-key (kbd "C-c c") 'org-capture)
 
 ;; adviced to turn this on, org-babel thingy, created by CD.
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
@@ -60,6 +77,9 @@
 (add-to-list 'load-path (concat emacs-dir "elpa/yasnippet-20131031.628"))
 (require 'yasnippet) ;; not yasnippet-bundle
 (yas-global-mode 1)
+
+;;less-css-mode
+(setq less-css-compile-at-save nil)
 
 ;; Server
 (load "server")

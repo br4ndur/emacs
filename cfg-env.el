@@ -1,7 +1,14 @@
 ;; cfg-env.el
 
 (when window-system
-  (blink-cursor-mode -1))
+(load-theme 'tango-dark t)
+(set-face-background 'default "black")
+(set-face-background 'mode-line "gray20")
+(set-face-foreground 'mode-line "white")
+(set-face-attribute 'fringe nil :background "black")
+(add-to-list 'default-frame-alist '(cursor-color . "white")))
+
+(blink-cursor-mode 0)
 
 ;; use utf-8
 (set-default-coding-systems 'utf-8)
@@ -13,12 +20,6 @@
 (setq inhibit-startup-message t)
 
 ;; load color theme
-(load-theme 'tango-dark t)
-(set-face-background 'default "black")
-(set-face-background 'mode-line "gray20")
-(set-face-foreground 'mode-line "white")
-(set-face-attribute 'fringe nil :background "black")
-(add-to-list 'default-frame-alist '(cursor-color . "white"))
 
 ;; enable ido mode
 (ido-mode t)
