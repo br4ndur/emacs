@@ -39,7 +39,7 @@
 
 (require 'epa-file)
 (epa-file-enable)
-(require 'cfg-gnus)
+;;(require 'cfg-gnus)
 
 
 ;;(setq org-capture-templates
